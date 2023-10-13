@@ -1,0 +1,23 @@
+{% extends "cards/base.html" %}
+
+{% block content %}
+
+{% if card %}
+
+<h2>EDIT</h2>
+
+{% else %}
+
+<h2>CREATE</h2>
+
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="SAVE CARD" class="btn btn-success">
+</form>
+
+<a href="{% url 'card-list' %}" class="btn btn-warning">CANCEL</a>
+
+{% endblock %}

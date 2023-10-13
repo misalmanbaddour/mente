@@ -1,0 +1,15 @@
+{% extends "cards/base.html" %}
+
+{% block content %}
+
+<h2>BOX {{ box_number }}</h2>
+
+<p>{{ object_list | length }} CARDS LEFT IN BOX.</p>
+
+{% if check_card %}
+
+{% include "cards/card.html" with card=check_card %}
+
+{% endif %}
+
+{% endblock content %}

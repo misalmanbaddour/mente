@@ -1,0 +1,3 @@
+{% for box in boxes %}
+    <a href="{% url 'box' box_num=box.number %}" class="btn btn-secondary">BOX {{ box.number }}</a>
+{% endfor %}
